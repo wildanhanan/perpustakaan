@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Detail Buku</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/detail.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html">
+  <img src="assets/icon-back.png" alt="Kembali" class="back-icon-img" />
+</a>
+
+    Detail Buku
+  </header>
+
+
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col">
+        <img src="assets/pragmatig.jpg" alt="Sampul Buku">
+      </div>
+      <div class="info-buku">
+        <h2>The Pragmatic Programmer: From Journeyman to Master</h2>
+        <p><strong>Penulis:</strong> Andrew Hunt & David Thomas</p>
+        <p><strong>Tahun:</strong> 2021</p>
+        <h3>Sinopsis</h3>
+        <p>
+          Buku ini memberikan panduan praktis dalam pengembangan perangkat lunak, mulai dari praktik coding yang efisien hingga pengambilan keputusan teknis yang bijak. Cocok bagi pemula maupun programmer berpengalaman yang ingin meningkatkan keterampilan dan pola pikir profesionalnya.
+        </p>
+      </div>
+    </div>
+
+    <h3>Sub-Bab Buku</h3>
+    <ul>
+      <li>1. A Pragmatic Philosophy</li>
+      <li>2. A Pragmatic Approach</li>
+      <li>3. The Basic Tools</li>
+      <li>4. Pragmatic Paranoia</li>
+      <li>5. Bend, or Break</li>
+      <li>6. Concurrency</li>
+      <li>7. While You Are Coding</li>
+      <li>8. Before the Project</li>
+    </ul>
+
+    <h3>Informasi Detail</h3>
+    <table class="tabel-detail">
+      <tr>
+        <th>ID</th>
+        <td>#0001</td>
+      </tr>
+      <tr>
+        <th>ISBN</th>
+        <td>978-0135957059</td>
+      </tr>
+      <tr>
+        <th>Penerbit</th>
+        <td>Addison-Wesley</td>
+      </tr>
+      <tr>
+        <th>Jumlah Halaman</th>
+        <td>352</td>
+      </tr>
+      <tr>
+        <th>Kategori</th>
+        <td>Teknologi / Pemrograman</td>
+      </tr>
+      <tr>
+        <th>Stok</th>
+        <td>7</td>
+      </tr>
+    </table>
+
+    <!-- lanjutan HTML sebelum bagian komentar -->
+    <h3>Tinggalkan Komentar</h3>
+    <div class="komentar-wrapper">
+      <!-- Form Komentar -->
+      <form class="form-komentar">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="komentar">Komentar:</label>
+        <textarea id="komentar" name="komentar" rows="4"></textarea>
+
+        <label for="rating">Rating (1–5):</label>
+        <input type="number" id="rating" name="rating" min="1" max="5">
+
+        <button type="submit" class="btn-kirim">Kirim Komentar</button>
+      </form>
+
+      <!-- Komentar Orang-orang -->
+      <div class="list-komentar">
+        <div class="komentar-item">
+          <strong>Rizky Hidayat</strong> <span class="rating">⭐⭐⭐⭐⭐</span>
+          <p>Buku ini sangat membantu untuk memahami mindset programmer sejati. Wajib baca!</p>
+        </div>
+        <div class="komentar-item">
+          <strong>Alisa Putri</strong> <span class="rating">⭐⭐⭐⭐</span>
+          <p>Bahasanya ringan dan tidak terlalu teknis. Cocok buat mahasiswa IT.</p>
+        </div>
+        <div class="komentar-item">
+          <strong>Wahyu Ramadhan</strong> <span class="rating">⭐⭐⭐⭐⭐</span>
+          <p>Isi buku banyak membuka wawasan soal praktik coding yang lebih rapi dan efisien.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <a href="#" class="link-kembali" id="scrollTopBtn">↑ Kembali ke Atas</a>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 Universitas Duta Bangsa. All rights reserved.
+  </footer>
+<script>
+  // Scroll ke atas dengan animasi halus
+  document.getElementById('scrollTopBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
+</body>
+</html>

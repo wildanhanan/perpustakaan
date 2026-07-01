@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aturan Perpustakaan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/tata-tertib.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>📚 Aturan Perpustakaan</h1>
+    <p>Silakan taati aturan demi kenyamanan bersama</p>
+  </header>
+
+  <section class="rules">
+    <div class="rule-card">
+      <h3>1. Jaga Ketertiban</h3>
+      <p>Dilarang berbicara keras, tertawa berlebihan, atau membuat keributan di dalam area perpustakaan.</p>
+    </div>
+    <div class="rule-card">
+      <h3>2. Tidak Makan dan Minum</h3>
+      <p>Area perpustakaan harus bebas dari makanan dan minuman untuk menjaga kebersihan.</p>
+    </div>
+    <div class="rule-card">
+      <h3>3. Rawat Buku dan Fasilitas</h3>
+      <p>Dilarang merobek, mencoret, atau merusak buku. Gunakan fasilitas dengan bijak.</p>
+    </div>
+    <div class="rule-card">
+      <h3>4. Gunakan Kartu Anggota</h3>
+      <p>Pinjam buku hanya dengan kartu anggota perpustakaan yang valid dan aktif.</p>
+    </div>
+    <div class="rule-card">
+      <h3>5. Tepat Waktu Mengembalikan</h3>
+      <p>Pengembalian buku yang terlambat akan dikenakan denda sesuai ketentuan.</p>
+    </div>
+    <div class="rule-card">
+      <h3>6. Dilarang Mengubah Tatanan</h3>
+      <p>Kursi, meja, dan rak harus tetap pada tempat semula setelah digunakan.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Perpustakaan UDB. Hak cipta dilindungi.</p>
+  </footer>
+
+  <script>
+    // Scroll reveal animasi sederhana
+    const cards = document.querySelectorAll('.rule-card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>

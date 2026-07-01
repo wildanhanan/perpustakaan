@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/login.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="assets/book-stack.png" alt="Logo" class="logo-navbar">
+      <h2>Perpustakaan <span class="u">U</span><span class="db">DB</span></h2>
+    </div>
+    <div class="navbar-right">
+      <a href="index.html"><p>Beranda</p></a>
+
+      <div class="dropdown-nav">
+        <p class="nav-dropdown-toggle">Koleksi</p>
+        <div class="dropdown-nav-menu">
+          <a href="semua-buku.html"><img src="assets/all.png" class="dropdown-icon-img"> Semua</a>
+          <a href="semua-buku-fiksi.html"><img src="assets/fiksi.png" class="dropdown-icon-img"> Fiksi</a>
+          <a href="semua-buku-nonfiksi.html"><img src="assets/nonfiksi.png" class="dropdown-icon-img"> Non-Fiksi</a>
+          <a href="semua-buku-biografi.html"><img src="assets/biografi.png" class="dropdown-icon-img"> Biografi</a>
+          <a href="semua-buku-religi.html"><img src="assets/religi.png" class="dropdown-icon-img"> Religi</a>
+          <a href="semua-buku-ilmiah.html"><img src="assets/ilmiah.png" class="dropdown-icon-img"> Ilmiah</a>
+        </div>
+      </div>
+
+      <div class="dropdown-tentang">
+        <p class="ttg-dropdown-toggle">Layanan</p>
+        <div class="dropdown-ttg-menu">
+          <a href="peminjaman.html"><img src="assets/peminjaman.png" class="dropdown-icon-img"> Peminjaman</a>
+          <a href="pengembalian.html"><img src="assets/pengembalian.png" class="dropdown-icon-img"> Pengembalian</a>
+        </div>
+      </div>
+
+      <div class="dropdown-layanan">
+        <p class="lyn-dropdown-toggle">Tentang</p>
+        <div class="dropdown-lyn-menu">
+          <a href="tentang.html"><img src="assets/info.png" class="dropdown-icon-img"> Tentang</a>
+          <a href="tata-tertib.html"><img src="assets/rules.png" class="dropdown-icon-img"> Tata Tertib</a>
+        </div>
+      </div>
+
+      <a href="profil.html" class="no-underline">
+        <img src="assets/man.png" alt="Profil" class="icon-profil">
+      </a>
+    </div>
+  </nav>
+
+  <div class="container-super">
+    <div class="container">
+      <div class="slideshow">
+        <div class="wrapper">
+          <img src="assets/1.png" alt="Slide 1">
+          <img src="assets/2.png" alt="Slide 2">
+          <img src="assets/6920933.jpg" alt="Slide 3">
+        </div>
+      </div>
+      <div class="login-form">
+        <div class="row">
+          <img src="assets/LOGO-removebg-preview.png" alt="Logo" class="logo">
+          <h2>Perpustakaan UDB</h2>
+        </div>
+        <label for="username">Email</label>
+        <input type="email" id="username" placeholder="Masukan e-mail">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Masukan password">
+        <a href="index.html" class="btn-login" onclick="showAlert()">Login</a>
+        <a href="registrasi.html"><p>Belum punya akun?</p></a>
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2025 Universitas Duta Bangsa. All rights reserved.</footer>
+
+  <script>
+    function showAlert() {
+      alert("Berhasil Login");
+    }
+  </script>
+</body>
+</html>

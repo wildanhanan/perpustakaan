@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda Perpustakaan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/beranda.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  
+
+  <!-- Navigasi -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="assets/book-stack.png" alt="Logo" class="logo-navbar">
+    <h2>Perpustakaan <span class="u">U</span><span class="db">DB</span></h2>
+  </div>
+
+  <div class="navbar-right">
+    <a href="beranda.html"><p>Beranda</p></a>
+    <a href="tentang.html"><p>Tentang</p></a>
+    <a href="layanan.html"><p>Layanan</p></a>
+    <a href="profil.html" class="no-underline">
+      <img src="assets/man.png" alt="">
+    </a>
+  </div>
+</nav>
+
+
+
+
+  <!-- Konten Utama -->
+  <div class="container">
+
+    <!-- Form Pencarian -->
+    <div class="card">
+  <div class="row">
+    <!-- Kolom Logo -->
+    <div class="col">
+      <img src="assets/logo.png" alt="Logo Perpustakaan" width="130px" height="150px">
+    </div>
+
+    <!-- Kolom Form + Gambar Head Icon -->
+    <div class="col">
+      <h3>Cari di Perpustakaan UDB</h3>
+      <div class="form-with-icon">
+        <!-- Form Pencarian -->
+        <form action="semua-buku.html" method="get">
+          <label>Judul:</label>
+          <input type="text" name="judul"><br><br>
+
+          <label>Penulis:</label>
+          <input type="text" name="penulis"><br><br>
+
+          <button type="submit" class="btn-red">Cari</button>
+        </form>
+
+        <!-- Gambar Ikon -->
+        <div class="head-icon">
+          <img src="assets/head-icon.png" alt="Icon Melambai">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Buku Pilihan Terbaik -->
+    <div class="card-semua">
+      <h3>Buku Pilihan Terbaik</h3>
+      <div class="card-books fade-in" style="animation-delay: 0.2s">
+
+
+        <!-- Card Buku -->
+        <div class="card-book">
+          <img src="assets/pragmatig.jpg" alt="The Pragmatic Programmer">
+          <div class="card-book-content">
+            <h4><a href="detail.html">The Pragmatic Programmer</a></h4>
+            <p>Andrew Hunt & David Thomas</p>
+            <p>2021</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/5cm.jpeg" alt="5cm">
+          <div class="card-book-content">
+            <h4>5cm</h4>
+            <p>Dnony Dhirgatoro</p>
+            <p>2005</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/ayatcinta.jpeg" alt="Ayat-ayat Cinta">
+          <div class="card-book-content">
+            <h4>Ayat-ayat Cinta</h4>
+            <p>Habiburrahman El Shirazy</p>
+            <p>2004</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/ensigeografi.jpeg" alt="Ensiklopedia Geografi">
+          <div class="card-book-content">
+            <h4>Ensiklopedia Geografi</h4>
+            <p>Doherty Gillian</p>
+            <p>2018</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/palestina.jpeg" alt="Ensiklopedi Palestina">
+          <div class="card-book-content">
+            <h4>Ensiklopedi Palestina</h4>
+            <p>Thariq As-Suwaidan</p>
+            <p>2017</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/tuhanberi.jpeg" alt="Tuhan, Beri Aku Alasan">
+          <div class="card-book-content">
+            <h4>Tuhan, Beri Aku Alasan</h4>
+            <p>Malik al Mughis & Luqman al Hakim</p>
+            <p>2023</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/puncak.jpeg" alt="Puncak Ilmu adalah Akhlak">
+          <div class="card-book-content">
+            <h4>Puncak Ilmu adalah Akhlak</h4>
+            <p>Mhd. Rois Almaududy</p>
+            <p>2021</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/sahabatnabi.jpeg" alt="Biografi 60 Sahabat">
+          <div class="card-book-content">
+            <h4>Biografi 60 Sahabat</h4>
+            <p>Khalid Muhammad Khalid</p>
+            <p>2018</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+        <div class="card-book">
+          <img src="assets/pragmatig.jpg" alt="The Pragmatic Programmer">
+          <div class="card-book-content">
+            <h4><a href="detail.html">The Pragmatic Programmer</a></h4>
+            <p>Andrew Hunt & David Thomas</p>
+            <p>2021</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/5cm.jpeg" alt="5cm">
+          <div class="card-book-content">
+            <h4>5cm</h4>
+            <p>Dnony Dhirgatoro</p>
+            <p>2005</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/ayatcinta.jpeg" alt="Ayat-ayat Cinta">
+          <div class="card-book-content">
+            <h4>Ayat-ayat Cinta</h4>
+            <p>Habiburrahman El Shirazy</p>
+            <p>2004</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/ensigeografi.jpeg" alt="Ensiklopedia Geografi">
+          <div class="card-book-content">
+            <h4>Ensiklopedia Geografi</h4>
+            <p>Doherty Gillian</p>
+            <p>2018</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/palestina.jpeg" alt="Ensiklopedi Palestina">
+          <div class="card-book-content">
+            <h4>Ensiklopedi Palestina</h4>
+            <p>Thariq As-Suwaidan</p>
+            <p>2017</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/tuhanberi.jpeg" alt="Tuhan, Beri Aku Alasan">
+          <div class="card-book-content">
+            <h4>Tuhan, Beri Aku Alasan</h4>
+            <p>Malik al Mughis & Luqman al Hakim</p>
+            <p>2023</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/puncak.jpeg" alt="Puncak Ilmu adalah Akhlak">
+          <div class="card-book-content">
+            <h4>Puncak Ilmu adalah Akhlak</h4>
+            <p>Mhd. Rois Almaududy</p>
+            <p>2021</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+        <div class="card-book">
+          <img src="assets/sahabatnabi.jpeg" alt="Biografi 60 Sahabat">
+          <div class="card-book-content">
+            <h4>Biografi 60 Sahabat</h4>
+            <p>Khalid Muhammad Khalid</p>
+            <p>2018</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="lihat-all" style="text-align: center; margin-top: 20px;">
+    <a href="semua-buku.html">
+      Lihat Semua Buku
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Universitas Duta Bangsa. All rights reserved.
+  </footer>
+
+</body>
+</html>

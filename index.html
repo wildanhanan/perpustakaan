@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda Perpustakaan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/index.css" />
+</head>
+<body class="beranda-body">
+
+
+  <main class="main-content">
+    <img src="assets/logo.png" alt="Logo Universitas" class="logo-img" />
+    <section class="content-box">
+      <h1 class="judul">Selamat Datang di Perpustakaan Universitas <span class="db">Duta Bangsa</span></h1>
+      <p class="deskripsi">Akses ribuan buku dan pengetahuan di ujung jari Anda.</p>
+      <div class="tombol-container">
+        <a href="javascript:void(0)" class="tombol tombol-merah tombol-icon" id="scroll-btn">
+          <img src="assets/possibility.png" alt="Ikon" class="icon-jelajah">
+          <span>Mulai Menjelajah</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="assets/book-stack.png" alt="Logo" class="logo-navbar">
+      <h2>Perpustakaan <span class="u">U</span><span class="db">DB</span></h2>
+    </div>
+    <div class="navbar-right">
+      <a href="index.html"><p>Beranda</p></a>
+      
+      <div class="dropdown-nav">
+        <p class="nav-dropdown-toggle">Koleksi </p>
+        <div class="dropdown-nav-menu">
+          <a href="semua-buku.html">
+            <img src="assets/all.png" class="dropdown-icon-img" alt="Semua Genre"> Semua
+          </a>
+          <a href="novel.html">
+            <img src="assets/fiksi.png" class="dropdown-icon-img" alt="Fiksi"> Novel
+          </a>
+          <a href="pengetahuan.html">
+            <img src="assets/nonfiksi.png" class="dropdown-icon-img" alt="Non-Fiksi"> Pengetahuan
+          </a>
+          <a href="agama.html">
+            <img src="assets/religi.png" class="dropdown-icon-img" alt="Religi"> Religi
+          </a>
+          <a href="ensiklopedia.html">
+            <img src="assets/ilmiah.png" class="dropdown-icon-img" alt="Ilmiah"> Ilmiah
+          </a>
+        </div>
+
+      </div>
+
+      <div class="dropdown-tentang">
+        <p class="ttg-dropdown-toggle">Layanan</p>
+        <div class="dropdown-ttg-menu">
+          <a href="peminjaman.html">
+            <img src="assets/peminjaman.png" alt="" srcset="" class="dropdown-icon-img">Peminjaman
+          </a>
+          <a href="pengembalian.html">
+            <img src="assets/pengembalian.png" alt="" srcset="" class="dropdown-icon-img"> Pengembalian
+          </a>
+        </div>
+      </div>
+
+      <div class="dropdown-layanan">
+        <p class="lyn-dropdown-toggle">Tentang</p>
+        <div class="dropdown-lyn-menu">
+          <a href="tentang.html">
+            <img src="assets/info.png" class="dropdown-icon-img" alt="Tentang Kami"> Tentang
+          </a>
+          <a href="tata-tertib.html">
+            <img src="assets/rules.png" class="dropdown-icon-img" alt="Tata Tertib"> Tata Tertib
+          </a>
+        </div>
+      </div>
+
+      <a href="profil.html" class="no-underline">
+        <img src="assets/man.png" alt="Profil">
+      </a>
+    </div>
+
+  </nav>
+
+  <div class="container" id="container-cari">
+    <div class="card">
+      <div class="row">
+        <div class="col">
+          <img src="assets/logo.png" alt="Logo Perpustakaan" width="130px" height="150px">
+        </div>
+        <div class="col">
+          <h3>Cari di Perpustakaan UDB</h3>
+          <div class="form-with-icon">
+            <form action="semua-buku.html" method="get">
+              <label>Judul:</label>
+              <input type="text" name="judul"><br><br>
+              <button type="submit" class="btn-red">Cari</button>
+            </form>
+            <div class="head-icon">
+              <img src="assets/head-icon.png" alt="Icon Melambai">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-semua" style="position: relative;">
+      <div class="row-col">
+        <h3 class="judul-bpt">⭐ Buku Pilihan Terbaik dari</h3>
+        <h3 class="judul-buku-pilihan" onclick="toggleDropdown()">
+          <span id="judul-kategori">Semua Genre</span>
+          <span class="dropdown-icon" id="dropdown-icon">▼</span>
+        </h3>
+      <div class="dropdown-menu" id="dropdown-menu">
+        <ul>
+          <li onclick="gantiKategori('Semua Genre')">Semua Genre</li>
+          <li onclick="gantiKategori('Novel')">Novel</li>
+          <li onclick="gantiKategori('Pengetahuan')">Pengetahuan</li>
+          <li onclick="gantiKategori('Agama')">Agama</li>
+          <li onclick="gantiKategori('Ilmiah')">Ilmiah</li>
+        </ul>
+      </div>
+      
+      </div>
+      
+
+      <!-- Container Buku per Genre -->
+      <div class="card-books fade-in" id="genre-semua">
+  <div class="card-book">
+  <a href="detail.html"><img src="assets/pragmatig.jpg" alt="The Pragmatic Programmer"></a>
+  <div class="card-book-content">
+    <h4><a href="detail.html">The Pragmatic Programmer</a></h4>
+    <p>Andrew Hunt & David Thomas</p>
+    <p>1999</p>
+    <p>Rating: ⭐⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <a href="detail.html"><img src="assets/atomic.jpeg" alt="Atomic Habits"></a>
+  <div class="card-book-content">
+    <h4><a href="detail.html">Atomic Habits</a></h4>
+    <p>James Clear</p>
+    <p>2018</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <a href="detail.html"><img src="assets/think.jpeg" alt="Thinking, Fast and Slow"></a>
+  <div class="card-book-content">
+    <h4><a href="detail.html">Thinking, Fast and Slow</a></h4>
+    <p>Daniel Kahneman</p>
+    <p>2011</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <a href="detail.html"><img src="assets/stay.jpeg" alt="Start With Why"></a>
+  <div class="card-book-content">
+    <h4><a href="detail.html">Start With Why</a></h4>
+    <p>Simon Sinek</p>
+    <p>2009</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+
+</div>
+
+      <div class="card-books fade-in" id="genre-fiksi" style="display:none;">
+  <div class="card-book">
+  <img src="assets/5cm.jpeg" alt="5cm">
+  <div class="card-book-content">
+    <h4>5cm</h4>
+    <p>Donny Dhirgantoro</p>
+    <p>2005</p>
+    <p>Rating: ⭐⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/laskar.jpeg" alt="Laskar Pelangi">
+  <div class="card-book-content">
+    <h4>Laskar Pelangi</h4>
+    <p>Andrea Hirata</p>
+    <p>2005</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/perahu.jpeg" alt="Perahu Kertas">
+  <div class="card-book-content">
+    <h4>Perahu Kertas</h4>
+    <p>Dewi Lestari</p>
+    <p>2009</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/harry.jpeg" alt="Harry Potter dan Batu Bertuah">
+  <div class="card-book-content">
+    <h4>Harry Potter dan Batu Bertuah</h4>
+    <p>J.K. Rowling</p>
+    <p>1997</p>
+    <p>Rating: ⭐⭐⭐⭐⭐</p>
+  </div>
+</div>
+
+</div>
+
+
+      <div class="card-books fade-in" id="genre-nonfiksi" style="display:none;">
+  <div class="card-book">
+  <img src="assets/tenang.jpeg" alt="Tetap Tenang Menghadapi Hidup">
+  <div class="card-book-content">
+    <h4>Tetap Tenang Menghadapi Hidup</h4>
+    <p>Mark Manson</p>
+    <p>2021</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/rich.png" alt="Rich Dad Poor Dad">
+  <div class="card-book-content">
+    <h4>Rich Dad Poor Dad</h4>
+    <p>Robert T. Kiyosaki</p>
+    <p>1997</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/what.png" alt="What Happened">
+  <div class="card-book-content">
+    <h4>What Happened</h4>
+    <p>Hillary Clinton</p>
+    <p>2017</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/grit.jpeg" alt="Grit: The Power of Passion and Perseverance">
+  <div class="card-book-content">
+    <h4>Grit</h4>
+    <p>Angela Duckworth</p>
+    <p>2016</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+
+</div>
+
+
+      <div class="card-books fade-in" id="genre-biografi" style="display:none;">
+ <div class="card-book">
+  <img src="assets/jobs.jpeg" alt="Steve Jobs">
+  <div class="card-book-content">
+    <h4>Steve Jobs</h4>
+    <p>Walter Isaacson</p>
+    <p>2011</p>
+    <p>Rating: ⭐⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/elon.jpeg" alt="Elon Musk">
+  <div class="card-book-content">
+    <h4>Elon Musk</h4>
+    <p>Ashlee Vance</p>
+    <p>2015</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/long.jpeg" alt="Long Walk to Freedom">
+  <div class="card-book-content">
+    <h4>Long Walk to Freedom</h4>
+    <p>Nelson Mandela</p>
+    <p>1994</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/myown.jpeg" alt="My Own Words">
+  <div class="card-book-content">
+    <h4>My Own Words</h4>
+    <p>Ruth Bader Ginsburg</p>
+    <p>2016</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+
+</div>
+
+
+<div class="card-books fade-in" id="genre-religi" style="display:none;">
+  <div class="card-book">
+  <img src="assets/riyadus.jpeg" alt="Riyadhus Shalihin">
+  <div class="card-book-content">
+    <h4>Riyadhus Shalihin</h4>
+    <p>Imam Nawawi</p>
+    <p>1240</p>
+    <p>Rating: ⭐⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/ihya.jpeg" alt="Ihya Ulumuddin">
+  <div class="card-book-content">
+    <h4>Ihya Ulumuddin</h4>
+    <p>Imam Al-Ghazali</p>
+    <p>1100</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/inthe.jpeg" alt="In the Footsteps of the Prophet">
+  <div class="card-book-content">
+    <h4>In the Footsteps of the Prophet</h4>
+    <p>Tariq Ramadan</p>
+    <p>2007</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/bio.jpeg" alt="Biografi Nabi SAW">
+  <div class="card-book-content">
+    <h4>Biografi Nabi SAW</h4>
+    <p>Shafiyyurrahman Al-Mubarakfuri</p>
+    <p>2001</p>
+    <p>Rating: ⭐⭐⭐⭐⭐</p>
+  </div>
+</div>
+
+</div>
+
+
+      <div class="card-books fade-in" id="genre-ilmiah" style="display:none;">
+ <div class="card-book">
+  <img src="assets/brife.jpeg" alt="Brief History of Time">
+  <div class="card-book-content">
+    <h4>Brief History of Time</h4>
+    <p>Stephen Hawking</p>
+    <p>1988</p>
+    <p>Rating: ⭐⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/cosmos.jpeg" alt="Cosmos">
+  <div class="card-book-content">
+    <h4>Cosmos</h4>
+    <p>Carl Sagan</p>
+    <p>1980</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/theorigin.jpeg" alt="On the Origin of Species">
+  <div class="card-book-content">
+    <h4>On the Origin of Species</h4>
+    <p>Charles Darwin</p>
+    <p>1859</p>
+    <p>Rating: ⭐⭐⭐⭐</p>
+  </div>
+</div>
+<div class="card-book">
+  <img src="assets/principia.jpeg" alt="Principia Mathematica">
+  <div class="card-book-content">
+    <h4>Principia Mathematica</h4>
+    <p>Isaac Newton</p>
+    <p>1687</p>
+    <p>Rating: ⭐⭐⭐⭐⭐</p>
+  </div>
+</div>
+
+</div>
+    <div class="lihat-semua fade-in" id="lihat-semua-wrapper">
+  <a id="lihat-semua-link" href="semua-buku.html" class="tombol tombol-merah">Lihat Semua Buku</a>
+</div>
+
+  </div>
+  
+
+  </div>
+  <footer class="footer">
+    © 2025 Universitas Duta Bangsa. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('scroll-btn').addEventListener('click', function() {
+      window.scrollBy({
+        top: 600, // ubah nilai ini sesuai kebutuhan scroll
+        behavior: 'smooth'
+      });
+    });
+
+    function toggleDropdown() {
+      const icon = document.getElementById("dropdown-icon");
+      const dropdown = document.getElementById("dropdown-menu");
+      if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+        icon.classList.remove("rotate");
+      } else {
+        dropdown.style.display = "block";
+        icon.classList.add("rotate");
+      }
+    }
+
+    function gantiKategori(namaKategori) {
+  const semuaGenre = [
+    "genre-semua",
+    "genre-fiksi",
+    "genre-nonfiksi",
+    "genre-biografi",
+    "genre-religi",
+    "genre-ilmiah"
+  ];
+  semuaGenre.forEach(id => {
+    document.getElementById(id).style.display = "none";
+  });
+
+  let link = "semua-buku.html"; // default
+
+  switch (namaKategori) {
+    case "Fiksi":
+      document.getElementById("genre-fiksi").style.display = "grid";
+      link = "semua-buku-fiksi.html";
+      break;
+    case "Non-Fiksi":
+      document.getElementById("genre-nonfiksi").style.display = "grid";
+      link = "semua-buku-nonfiksi.html";
+      break;
+    case "Biografi":
+      document.getElementById("genre-biografi").style.display = "grid";
+      link = "semua-buku-biografi.html";
+      break;
+    case "Religi":
+      document.getElementById("genre-religi").style.display = "grid";
+      link = "semua-buku-religi.html";
+      break;
+    case "Ilmiah":
+      document.getElementById("genre-ilmiah").style.display = "grid";
+      link = "semua-buku-ilmiah.html";
+      break;
+    default:
+      document.getElementById("genre-semua").style.display = "grid";
+  }
+
+  document.getElementById("judul-kategori").textContent = namaKategori;
+  document.getElementById("dropdown-menu").style.display = "none";
+  document.getElementById("dropdown-icon").classList.remove("rotate");
+
+  // Update href
+  const lihatSemua = document.getElementById("lihat-semua-link");
+  lihatSemua.setAttribute("href", link);
+
+  // Trigger ulang animasi fade-in
+  const wrapper = document.getElementById("lihat-semua-wrapper");
+  wrapper.classList.remove("fade-in"); // reset
+  void wrapper.offsetWidth; // trick to reflow/restart animation
+  wrapper.classList.add("fade-in"); // apply again
+}
+
+
+    document.addEventListener("click", function(event) {
+      const isClickInside = document.querySelector(".judul-buku-pilihan").contains(event.target);
+      if (!isClickInside) {
+        document.getElementById("dropdown-menu").style.display = "none";
+        document.getElementById("dropdown-icon").classList.remove("rotate");
+      }
+    });
+
+  
+  </script>
+</body>
+</html>
