@@ -1,0 +1,297 @@
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+/* ==== UTILITAS WARNA ==== */
+.db {
+  color: #b81717;
+}
+.u {
+  color: #273085;
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, #ffffff, #ebedfd);
+  padding: 0px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 300;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: #273085;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.navbar a:not(.no-underline)::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: -1px;
+  background-color: #b81717;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+.navbar a:not(.no-underline):hover::after {
+  width: 100%;
+}
+.navbar a p {
+  margin: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.navbar a:hover p {
+  transform: translateY(-2px) scale(1.05);
+  color: #b81717;
+  font-weight: 600;
+}
+
+/* Ikon umum di navbar */
+.navbar img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+.navbar img:hover {
+  transform: scale(1.1);
+}
+
+/* Khusus ikon profil (avatar) */
+.navbar-right .icon-profil {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.navbar-right img {
+  width: 17px;
+  height: 17px;
+  
+}
+/* ==== DROPDOWN ==== */
+.dropdown-nav, .dropdown-tentang, .dropdown-layanan {
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+  color: #273085;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+.dropdown-nav:hover .dropdown-nav-menu,
+.dropdown-tentang:hover .dropdown-ttg-menu,
+.dropdown-layanan:hover .dropdown-lyn-menu {
+  display: block;
+}
+.dropdown-nav-menu,
+.dropdown-ttg-menu,
+.dropdown-lyn-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  min-width: 160px;
+}
+.dropdown-nav-menu a,
+.dropdown-ttg-menu a,
+.dropdown-lyn-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  color: #273085;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+.dropdown-nav-menu a:hover,
+.dropdown-ttg-menu a:hover,
+.dropdown-lyn-menu a:hover {
+  background-color: #f0f0f0;
+  color: #b81717;
+}
+.dropdown-icon-img {
+  width: 14px;
+  height: 14px;
+}
+
+/* ========== LOGIN CONTAINER ========== */
+.container-super {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px; /* kompensasi tinggi navbar */
+}
+
+.container {
+  width: 700px;
+  height: 350px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(192, 1, 1, 0.15);
+}
+
+/* ========== SLIDESHOW ========== */
+.slideshow {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.wrapper {
+  display: flex;
+  width: 1200px;
+  height: 400px;
+  animation: slide 7s infinite;
+}
+.wrapper img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+@keyframes slide {
+  0%, 33.33% { transform: translateX(0); }
+  44.44%, 77.77% { transform: translateX(-400px); }
+  88.88%, 100% { transform: translateX(-800px); }
+}
+
+/* ========== LOGIN FORM ========== */
+.login-form {
+  width: 50%;
+  padding: 30px;
+  background-color: #ebedfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.row .logo {
+  width: 40px;
+  height: 50px;
+  margin-right: 10px;
+}
+.login-form h2 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #333;
+}
+.login-form label {
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+.login-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+.btn-login {
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+  text-decoration: none;
+  width: 100%;
+}
+.btn-login:hover {
+  background-color: #bd2020;
+}
+.login-form p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: x-small;
+  color: #5e5e5e;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #273085;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  width: 100vw;
+  margin: 0;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+  .slideshow, .login-form {
+    width: 100%;
+    height: 250px;
+  }
+  .login-form {
+    padding: 20px;
+  }
+  .wrapper {
+    width: 300%;
+  }
+  .wrapper img {
+    height: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+  }
+  .navbar-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}

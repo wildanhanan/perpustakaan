@@ -1,0 +1,304 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+  background-color: #b81717;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 15px;
+}
+
+/* Navigasi */
+/* Navbar */
+.navbar {
+  top: 0;
+  z-index: 10000;
+  position: fixed;
+  width: 98%;
+  background: linear-gradient(to right, #ffffff, #ebedfd);
+  padding: 0px 20px;
+  margin-bottom: 30px;
+  
+  display: flex;
+  justify-content: space-between; /* Kiri & kanan */
+  align-items: center;
+  font-weight: 300;
+}
+
+/* Kiri: Logo dan Judul */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.u{
+  color: #273085;
+}
+
+.db{
+  color: #b81717;
+}
+
+/* Kanan: Link Navigasi */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+
+/* Link umum */
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: #273085;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Link teks saja (tanpa class .no-underline) */
+.navbar a:not(.no-underline)::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: -1px;
+  background-color: #b81717;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+/* Hover teks */
+.navbar a:not(.no-underline):hover {
+  color: #273085;
+  font-weight: 400;
+}
+
+.navbar a:not(.no-underline):hover::after {
+  width: 100%;
+}
+
+/* Animasi teks dalam <p> */
+.navbar a p {
+  margin: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover p {
+  transform: translateY(-2px) scale(1.05);
+  color: #b81717;
+  font-weight: 600;
+}
+
+/* Gambar profil */
+.navbar img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Container Utama */
+.container {
+  width: 1000px;
+  max-width: 95%;
+  margin: 30px auto;
+}
+
+/* Card Umum */
+.card {
+  height: 250px;
+  background-color: #f0fbff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  margin-top: 100px;
+}
+
+.card-semua {
+  background-color: #f0fbff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+/* Flex Row */
+.row {
+  display: flex;
+  gap: 40px;
+}
+
+/* Kolom */
+.col img {
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+/* Form + Head Icon sejajar */
+.form-with-icon {
+  display: flex;
+  align-items: flex-start; /* Penting agar form tidak mengikuti tinggi gambar */
+  gap: 20px;
+}
+
+
+/* Gambar Icon */
+.head-icon img {
+  margin-top: -80px;
+  padding: 0;
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+  margin-left: 60px;
+}
+
+
+/* Form */
+form h3 {
+  margin-top: 0;
+}
+
+form label {
+  display: inline-block;
+  width: 100px;
+}
+
+form input[type="text"] {
+  padding: 6px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+form button a {
+  text-decoration: none;
+  color: white;
+}
+
+button:nth-of-type(1) {
+  background-color: #b81717;
+}
+
+
+.btn {
+  padding: 8px 16px;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+
+/* Buku dalam Card */
+.card-books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card-book {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card-book:hover {
+  transform: translateY(-5px);
+}
+
+.card-book img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.card-book-content {
+  padding: 10px 15px;
+}
+
+.card-book-content h4 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.card-book-content h4 a {
+  color: #273085;
+  text-decoration: none;
+}
+
+.card-book-content h4 a:hover {
+  text-decoration: underline;
+}
+
+.card-book-content p {
+  margin: 3px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.lihat-all {
+  text-align: center;
+   margin-top: 800px;
+}
+
+.lihat-all a{
+  text-decoration: none;
+  color: #000000; font-weight: 400;
+}
+
+.lihat-all a:hover{
+  color: #1e6410; font-weight: 400;
+}
+
+/* Footer */
+footer {
+  background-color: #273085;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Efek animasi saat load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+

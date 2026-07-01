@@ -1,0 +1,84 @@
+/* Font & Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fef9f4;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 60px 20px 20px;
+  background: linear-gradient(135deg, #ffe8cc, #fcd5ce);
+}
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease forwards;
+}
+.header p {
+  font-size: 1.1rem;
+  color: #555;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+/* Rules Section */
+.rules {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+.rule-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.5s ease;
+}
+.rule-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.rule-card h3 {
+  margin-bottom: 10px;
+  color: #e07a5f;
+}
+.rule-card:hover {
+  transform: scale(1.03);
+  background-color: #fffdfb;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #faeee0;
+  font-size: 0.9rem;
+  color: #7b7b7b;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+}

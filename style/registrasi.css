@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.container-super {
+  background-color: #ffffff;
+  flex: 1; /* biar ngisi ruang di antara header & footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+
+header {
+  background-color: #b81717;
+  color: white;
+  padding: 7px 0;
+  text-align: center;
+  font-size: 13px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+footer {
+  background-color:#273085;
+  color: white;
+  text-align: center;
+  padding: 7px 0;
+  margin-top: auto;
+  font-size: 13px;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 350px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(192, 1, 1, 0.15);
+}
+
+.slideshow {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  width: 1200px; /* 3 gambar x 400px */
+  height: 400px;
+  animation: slide 7s infinite;
+}
+
+.wrapper img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover; /* atau contain, sesuai preferensi */
+  flex-shrink: 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.row .logo {
+  margin-top: 100px;
+  width: 40px; /* atau ukuran sesuai keinginan */
+  height: 50px;
+  margin-right: 10px;
+}
+.login-form {
+  margin-top: ;
+  width: 50%;
+  padding: 30px;
+  background-color: #ebedfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form h2 {
+  margin-top: 120px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.login-form label {
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+.login-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.btn-login {
+  margin-top: 20px;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+  text-decoration: none;
+  width: 100%;
+}
+.btn-login:hover {
+  background-color: #bd2020;
+}
+
+
+p{
+  margin-top: 10px;
+  text-align: center;
+  font-size: x-small;
+  color: #5e5e5e;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(0);
+  }
+  44.44% {
+    transform: translateX(-400px);
+  }
+  77.77% {
+    transform: translateX(-400px);
+  }
+  88.88% {
+    transform: translateX(-800px);
+  }
+  100% {
+    transform: translateX(-800px);
+  }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .slideshow, .login-form {
+    width: 100%;
+    height: 250px;
+  }
+
+  .login-form {
+    padding: 20px;
+  }
+
+  .wrapper {
+    width: 300%;
+  }
+
+  .wrapper img {
+    height: 100%;
+  }
+}

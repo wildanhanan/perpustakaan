@@ -1,0 +1,81 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-image: #f9f9f9;
+}
+
+/* Header */
+header {
+  background-color: #b81717;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #f1f1f1;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #273085;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.navbar a:hover {
+  background-color: #e3e3e3;
+}
+
+/* Konten Utama */
+.container {
+  width: 1000px;
+  max-width: 95%;
+  margin: 30px auto;
+}
+
+/* Card */
+.card {
+  background-image: url('..assets/logo-trans.png');
+  background-size: 450px 550px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.welcome{
+    text-align: center;
+}
+
+.card h2, .card h3 {
+  color: #273085;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #273085;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}

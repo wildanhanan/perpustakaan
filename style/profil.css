@@ -1,0 +1,105 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.profil-header {
+  background-color: #b81717;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+main {
+  padding-top: 60px; /* agar konten tidak tertutup header */
+}
+
+.container-profile {
+  margin-top: 20px;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 40px 20px;
+}
+
+.profile-img img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nama {
+  font-weight: bold;
+  font-size: large;
+}
+
+.password {
+  color: red;
+}
+
+.logout-icon {
+  width: 22px;
+  height: 22px;
+  margin-top: 12px;
+}
+
+.list-buku {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.profil-footer {
+  background-color: #273085;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+}
+
+.icon-kecil {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+
+.table a {
+  transition: color 0.2s ease;
+}
+
+.table a:hover {
+  color: #b81717;
+  text-decoration: underline;
+}
+
+/* Responsif tambahan untuk profil */
+@media (max-width: 576px) {
+  .container-profile {
+    padding: 30px 15px;
+  }
+
+  .profile-img img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .logout-icon {
+    margin-top: 8px;
+  }
+
+  .list-buku {
+    margin-bottom: 20px;
+  }
+}

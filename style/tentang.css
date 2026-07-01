@@ -1,0 +1,360 @@
+/* RESET & DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f0f4ff, #e9e9e9);
+  color: #333;
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, #ffffff, #ebedfd);
+  padding: 0px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 300;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-left h2 {
+  margin-top: 20px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: #273085;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar a:not(.no-underline)::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: -1px;
+  background-color: #b81717;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.navbar a:not(.no-underline):hover::after {
+  width: 100%;
+}
+
+.navbar a p {
+  margin: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover p {
+  transform: translateY(-2px) scale(1.05);
+  color: #b81717;
+  font-weight: 600;
+}
+
+/* Ikon umum di navbar */
+.navbar img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar img:hover {
+  transform: scale(1.1);
+}
+
+/* Khusus ikon profil (avatar) */
+.navbar-right .icon-profil {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.navbar-right img {
+  width: 17px;
+  height: 17px;
+}
+
+/* ==== DROPDOWN ==== */
+.dropdown-nav, .dropdown-tentang, .dropdown-layanan {
+  position: relative;
+  font-weight: 600;
+  color: #273085;
+  padding: 10px;
+}
+
+.dropdown-nav-menu,
+.dropdown-ttg-menu,
+.dropdown-lyn-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  padding-top: 8px; /* biar gak cepat hilang saat hover */
+}
+
+.dropdown-nav:hover .dropdown-nav-menu,
+.dropdown-tentang:hover .dropdown-ttg-menu,
+.dropdown-layanan:hover .dropdown-lyn-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dropdown-nav-menu a,
+.dropdown-ttg-menu a,
+.dropdown-lyn-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  color: #273085;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-nav-menu a:hover,
+.dropdown-ttg-menu a:hover,
+.dropdown-lyn-menu a:hover {
+  background-color: #f0f0f0;
+  color: #b81717;
+}
+
+.dropdown-icon-img {
+  width: 14px;
+  height: 14px;
+}
+
+/* ==== HERO ==== */
+header.hero {
+  margin-top: 70px;
+  background-image: url('../assets/library (2).jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.hero-overlay h1 {
+  font-size: 36px;
+}
+
+.hero-overlay p {
+  font-size: 18px;
+}
+
+/* ==== TATA LETAK ==== */
+.icon-features{
+  width: 50px;
+  margin: 10px;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #273085;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #273085;
+  margin-bottom: 10px;
+}
+
+p, li {
+  font-size: 16px;
+}
+
+.grid-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.grid-2 > div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.visi-misi ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.features .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.feature-box {
+  background-color: #f0fbff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ==== TIM ==== */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+}
+
+.team-card {
+  width: 200px;
+}
+
+.team-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ==== STATISTIK ==== */
+.stats {
+  background-color: #333333;
+  color: white;
+  padding: 40px 0;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.stat-grid h3 {
+  font-size: 28px;
+  color: #fff;
+}
+
+.stat-grid p {
+  font-size: 14px;
+  color: #eee;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1c245e;
+  color: white;
+  font-size: 14px;
+}
+
+/* ==== HOVER EFFECTS ==== */
+.feature-box:hover {
+  transform: translateY(-5px);
+  background-color: #dff4ff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.team-card img:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s ease;
+}
+
+.stat-grid div:hover {
+  background-color: #1c245e;
+  border-radius: 12px;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-left h2 {
+    font-size: 18px;
+  }
+
+  .logo-navbar {
+    width: 40px;
+    height: 40px;
+  }
+
+  header.hero {
+    height: 40vh;
+  }
+
+  .hero-overlay h1 {
+    font-size: 24px;
+  }
+
+  .hero-overlay p {
+    font-size: 14px;
+  }
+}

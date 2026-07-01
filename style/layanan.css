@@ -1,0 +1,136 @@
+.navbar {
+  top: 0;
+  z-index: 10000;
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(to right, #ffffff, #ebedfd);
+  padding: 0px 20px;
+  margin-bottom: 30px;
+  
+  display: flex;
+  justify-content: space-between; /* Kiri & kanan */
+  align-items: center;
+  font-weight: 300;
+}
+
+/* Kiri: Logo dan Judul */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-left p {
+  margin-top: 10px;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.u{
+  color: #273085;
+}
+
+.db{
+  color: #b81717;
+}
+
+/* Kanan: Link Navigasi */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+
+/* Link umum */
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: #273085;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Link teks saja (tanpa class .no-underline) */
+.navbar a:not(.no-underline)::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: -1px;
+  background-color: #b81717;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+/* Hover teks */
+.navbar a:not(.no-underline):hover {
+  color: #273085;
+  font-weight: 400;
+}
+
+.navbar a:not(.no-underline):hover::after {
+  width: 100%;
+}
+
+/* Animasi teks dalam <p> */
+.navbar a p {
+  margin: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover p {
+  transform: translateY(-2px) scale(1.05);
+  color: #b81717;
+  font-weight: 600;
+}
+
+/* Gambar profil */
+.navbar img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar img:hover {
+  transform: scale(1.1);
+}
+
+body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .layanan-header {
+      background-color: #0d6efd;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      border-bottom: 4px solid #084298;
+    }
+
+    .container-layanan img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    .btn-merah {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+    }
+
+    .btn-merah:hover {
+      background-color: #bb2d3b;
+    }
+
+    .form-container {
+      margin-top: 2rem;
+    }
+
+    footer{
+        background-color: #273085;
+    }
